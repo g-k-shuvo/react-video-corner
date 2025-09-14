@@ -1,0 +1,67 @@
+{
+  "name": "react-video-corner",
+  "version": "1.0.0",
+  "description": "A customizable React component for displaying videos in the corner of your screen with expand/collapse functionality",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode library && tsc --project tsconfig.lib.json",
+    "build:lib": "vite build --mode library",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "video",
+    "corner",
+    "youtube",
+    "component",
+    "ui",
+    "typescript"
+  ],
+  "author": "Golam Kibria",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/golamkibria/react-video-corner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/golamkibria/react-video-corner/issues"
+  },
+  "homepage": "https://github.com/golamkibria/react-video-corner#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.344.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^3.14.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.3.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "@rollup/plugin-terser": "^0.4.4"
+  }
+}

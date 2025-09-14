@@ -1,0 +1,37 @@
+# Source files
+src/
+example/
+public/
+
+# Development files
+vite.config.ts
+tsconfig*.json
+eslint.config.js
+tailwind.config.js
+postcss.config.js
+
+# Development dependencies
+node_modules/
+*.log
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Build artifacts (keep dist/)
+coverage/
+.nyc_output/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
