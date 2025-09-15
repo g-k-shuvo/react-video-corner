@@ -11,6 +11,14 @@ export default defineConfig({
     host: true,
     open: true
   },
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[hash].[ext]'
+      }
+    }
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
