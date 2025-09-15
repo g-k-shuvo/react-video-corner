@@ -1,13 +1,14 @@
 {
   "name": "react-video-corner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A customizable React component for displaying videos in the corner of your screen with expand/collapse functionality",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "vite build --mode library && tsc --project tsconfig.lib.json",

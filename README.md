@@ -13,6 +13,10 @@ A customizable React component for displaying videos in the corner of your scree
 - 📍 **Flexible Positioning**: Choose from 4 corner positions
 - 🎯 **Easy Integration**: Simple props-based API
 
+## 🚀 Live Demo
+
+**[Try the Interactive Demo →](https://g-k-shuvo.github.io/react-video-corner/)**
+
 ## Installation
 
 ```bash
@@ -29,7 +33,7 @@ yarn add react-video-corner
 
 ```tsx
 import React from 'react';
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 
 function App() {
   return (
@@ -67,7 +71,7 @@ function App() {
 ### Basic Usage
 
 ```tsx
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 
 <VideoCorner
   videoSrc="/sample-video.mp4"
@@ -80,7 +84,7 @@ import VideoCorner from 'react-video-corner';
 ### YouTube Video
 
 ```tsx
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 
 <VideoCorner
   videoSrc="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -96,7 +100,7 @@ import VideoCorner from 'react-video-corner';
 ### Custom Styling
 
 ```tsx
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 
 <VideoCorner
   videoSrc="/promo-video.mp4"
@@ -115,7 +119,7 @@ import VideoCorner from 'react-video-corner';
 ### Multiple Video Corners
 
 ```tsx
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 
 function App() {
   return (
@@ -240,9 +244,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions, please:
 
-1. Check the [Issues](https://github.com/yourusername/react-video-corner/issues) page
+1. Check the [Issues](https://github.com/g-k-shuvo/react-video-corner/issues) page
 2. Create a new issue with detailed information
-3. Contact us at [your-email@example.com]
+3. Contact us at [gkshuvo24@gmail.com]
 
 ## Acknowledgments
 

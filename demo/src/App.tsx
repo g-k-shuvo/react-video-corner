@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import VideoCorner from 'react-video-corner';
+import { VideoCorner } from 'react-video-corner';
 import { Settings, Youtube } from 'lucide-react';
 
 function App() {
@@ -54,7 +54,14 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-center">Video Corner Component Demo</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          React Video Corner
+        </h1>
+        <p className="text-xl text-gray-600 text-center mb-2">Interactive Demo</p>
+        <p className="text-gray-500 text-center mb-8 max-w-2xl mx-auto">
+          A customizable floating video player component for React applications. 
+          Supports local videos and YouTube integration with expand/collapse functionality.
+        </p>
         
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
@@ -212,24 +219,49 @@ function App() {
           )}
         </div>
         
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Demo Content</h2>
-          <p className="mb-4">
-            This is a demo page showing how the Video Corner component works. The Video Corner appears in the 
-            {videoSettings.position.split('-').join(' ')} corner of the screen.
-          </p>
-          <p className="mb-4">
-            The Video Corner initially plays in a smaller size ({videoSettings.smallSize}px) and expands to a larger size ({videoSettings.largeSize}px) when clicked.
-            When expanded, you can control the video with the playback controls at the bottom.
-          </p>
-          <p>
-            You can customize all aspects of the Video Corner using the settings panel above. Try changing the position, size, colors, and other properties to see how they affect the Video Corner.
-          </p>
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 className="text-2xl font-semibold mb-6 text-center">How It Works</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-blue-600">🎯 Current Configuration</h3>
+              <div className="space-y-2 text-sm">
+                <p><span className="font-medium">Position:</span> {videoSettings.position.split('-').join(' ')}</p>
+                <p><span className="font-medium">Video Type:</span> {videoSettings.isYoutube ? 'YouTube' : 'Local Video'}</p>
+                <p><span className="font-medium">Small Size:</span> {videoSettings.smallSize}px</p>
+                <p><span className="font-medium">Large Size:</span> {videoSettings.largeSize}px</p>
+                <p><span className="font-medium">Autoplay:</span> {videoSettings.autoplay ? 'Enabled' : 'Disabled'}</p>
+                <p><span className="font-medium">Initially Muted:</span> {videoSettings.initiallyMuted ? 'Yes' : 'No'}</p>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-green-600">✨ Features</h3>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center"><span className="mr-2">🎥</span> Local & YouTube video support</li>
+                <li className="flex items-center"><span className="mr-2">📱</span> Responsive design</li>
+                <li className="flex items-center"><span className="mr-2">🎨</span> Fully customizable styling</li>
+                <li className="flex items-center"><span className="mr-2">🎮</span> Interactive controls</li>
+                <li className="flex items-center"><span className="mr-2">⚡</span> Zero dependencies</li>
+                <li className="flex items-center"><span className="mr-2">🔧</span> TypeScript support</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">💡 Usage Instructions</h3>
+            <ol className="list-decimal list-inside space-y-1 text-sm text-blue-700">
+              <li>Click the Video Corner to expand it to full size</li>
+              <li>Use the controls at the bottom to play/pause, mute/unmute, or restart</li>
+              <li>Click the X button to minimize or close the video</li>
+              <li>Customize the appearance using the settings panel above</li>
+            </ol>
+          </div>
           
           <div className="mt-6 p-4 bg-gray-50 rounded-md border border-gray-200">
             <h3 className="text-lg font-medium mb-2">Implementation Example</h3>
             <pre className="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto text-sm">
-              {`import VideoCorner from 'react-video-corner';
+              {`import { VideoCorner } from 'react-video-corner';
 
 // In your component:
 <VideoCorner
@@ -247,6 +279,44 @@ function App() {
             </pre>
           </div>
         </div>
+        
+        {/* Footer */}
+        <footer className="bg-white rounded-lg shadow-md p-6 mt-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold mb-4">📦 Get Started</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold mb-2">Install</h4>
+                <code className="text-sm bg-gray-800 text-white p-2 rounded block">
+                  npm install react-video-corner
+                </code>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold mb-2">Import</h4>
+                <code className="text-sm bg-gray-800 text-white p-2 rounded block">
+                  import {'{'} VideoCorner {'}'} from 'react-video-corner'
+                </code>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold mb-2">Use</h4>
+                <code className="text-sm bg-gray-800 text-white p-2 rounded block">
+                  &lt;VideoCorner videoSrc="/video.mp4" /&gt;
+                </code>
+              </div>
+            </div>
+            
+            <div className="border-t pt-4">
+              <p className="text-gray-600 mb-2">
+                Made with ❤️ by <a href="https://github.com/g-k-shuvo" className="text-blue-600 hover:underline">Golam Kibria</a>
+              </p>
+              <div className="flex justify-center space-x-4 text-sm">
+                <a href="https://github.com/g-k-shuvo/react-video-corner" className="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://www.npmjs.com/package/react-video-corner" className="text-blue-600 hover:underline">NPM</a>
+                <a href="https://github.com/g-k-shuvo/react-video-corner/issues" className="text-blue-600 hover:underline">Issues</a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
       
       {/* The actual VideoCorner component */}
