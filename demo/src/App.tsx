@@ -32,6 +32,7 @@ function App() {
   };
 
   const toggleVideoType = () => {
+    console.log(import.meta.env.VITE_DEMO_YOUTUBE_URL);
     setVideoSettings(prev => {
       if (prev.isYoutube) {
         return {
