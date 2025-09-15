@@ -37,7 +37,7 @@
   "bugs": {
     "url": "https://github.com/g-k-shuvo/react-video-corner/issues"
   },
-  "homepage": "https://github.com/g-k-shuvo/react-video-corner#readme",
+  "homepage": "https://g-k-shuvo.github.io/react-video-corner",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
