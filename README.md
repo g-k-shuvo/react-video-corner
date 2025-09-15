@@ -176,17 +176,34 @@ If you need additional styling, you can target the component using CSS:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/react-video-corner.git
+git clone https://github.com/g-k-shuvo/react-video-corner.git
 
 # Install dependencies
 npm install
 
-# Start development server
-npm run dev
-
 # Build the library
-npm run build:lib
+npm run build
 ```
+
+### Demo Project
+
+The repository includes a demo project that showcases all features:
+
+```bash
+# Install demo dependencies
+npm run demo:install
+
+# Start demo development server
+npm run demo:dev
+
+# Build demo
+npm run demo:build
+```
+
+The demo will be available at `http://localhost:5175` and includes:
+- Interactive settings panel
+- Real-time customization
+- All component features demonstration
 
 ### Testing
 
@@ -194,7 +211,7 @@ npm run build:lib
 # Run linting
 npm run lint
 
-# Build and test
+# Build the library
 npm run build
 ```
 

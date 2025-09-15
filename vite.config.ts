@@ -34,9 +34,7 @@ export default defineConfig(({ mode }) => {
         sourcemap: true,
         emptyOutDir: true,
       },
-      optimizeDeps: {
-        exclude: ['lucide-react'],
-      },
+      optimizeDeps: {},
     };
   }
 
@@ -49,8 +47,6 @@ export default defineConfig(({ mode }) => {
       host: true,
       open: true
     },
-    optimizeDeps: {
-      exclude: ['lucide-react'],
-    },
+    optimizeDeps: {},
   };
 });

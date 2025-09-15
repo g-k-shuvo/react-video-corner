@@ -3,12 +3,16 @@ src/
 example/
 public/
 
+# Video files
+*.mp4
+*.mov
+*.avi
+*.webm
+
 # Development files
 vite.config.ts
 tsconfig*.json
 eslint.config.js
-tailwind.config.js
-postcss.config.js
 
 # Development dependencies
 node_modules/

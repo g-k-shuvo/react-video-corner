@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import VideoCorner from './components/VideoCorner';
+import VideoCorner from 'react-video-corner';
 import { Settings, Youtube } from 'lucide-react';
 
 function App() {
   const [videoSettings, setVideoSettings] = useState({
-    videoSrc: '/sample.mp4',
-    isYoutube: false,
+    videoSrc: import.meta.env.VITE_DEMO_VIDEO_URL || '/sample.mp4',
+    isYoutube: import.meta.env.VITE_DEMO_IS_YOUTUBE === 'true' || false,
     position: 'bottom-right',
     smallSize: 150,
     largeSize: 320,
@@ -37,14 +37,14 @@ function App() {
         return {
           ...prev,
           isYoutube: false,
-          videoSrc: '/sample.mp4'
+          videoSrc: import.meta.env.VITE_DEMO_VIDEO_URL
         };
       } else {
         // Switch to YouTube video
         return {
           ...prev,
           isYoutube: true,
-          videoSrc: 'https://www.youtube.com/watch?v=riV3c4hYriE'
+          videoSrc: import.meta.env.VITE_DEMO_YOUTUBE_URL
         };
       }
     });
@@ -228,7 +228,7 @@ function App() {
           <div className="mt-6 p-4 bg-gray-50 rounded-md border border-gray-200">
             <h3 className="text-lg font-medium mb-2">Implementation Example</h3>
             <pre className="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto text-sm">
-              {`import VideoCorner from './components/VideoCorner';
+              {`import VideoCorner from 'react-video-corner';
 
 // In your component:
 <VideoCorner
